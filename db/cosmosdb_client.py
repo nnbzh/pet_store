@@ -48,9 +48,9 @@ class CosmosDb:
         result = []
         for item in arr:
             obj = {
-                'id': item['id'],
-                'name': item['name'],
-                'description': item['description'],
+                'id': item['id'] if 'id' in item else None,
+                'name': item['name'] if 'name' in item else None,
+                'description': item['description'] if 'description' in item else None,
                 'photo': item['photo'] if 'photo' in item else None
             }
 
