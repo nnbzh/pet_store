@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 40%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+    <title>Pet shop</title>
+</head>
+<body>
+
+{% for pet in pets %}
+<div class="card">
+    <img src="/templates/404.png" alt="Avatar" style="width:100px;height: 100px">
+    <div class="container">
+        <h4><b>{{ pet.name }}</b></h4>
+        <p>{{ pet.description }}</p>
+    </div>
+</div>
+{% endfor %}
+
+</body>
+</html>
